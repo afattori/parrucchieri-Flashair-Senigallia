@@ -655,7 +655,7 @@ a:focus-visible, button:focus-visible {
 .instagram-intro p:last-child { color: var(--color-ink-soft); }
 
 .instagram-embed {
-  max-width: 540px;
+  max-width: 380px;
   margin: 0 auto;
   min-height: 240px;
   display: flex;
@@ -666,6 +666,7 @@ a:focus-visible, button:focus-visible {
   margin: 0 !important;
   min-width: 0 !important;
   width: 100% !important;
+  max-width: 380px !important;
 }
 .instagram-placeholder {
   width: 100%;
@@ -701,3 +702,19 @@ a:focus-visible, button:focus-visible {
   font-size: 0.95rem;
 }
 .instagram-placeholder a:hover, .reviews-link:hover { color: var(--color-pink-deep); }
+
+
+.contact-map { position: relative; }
+.map-directions {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: var(--color-cream);
+  box-shadow: 0 4px 16px rgba(46, 33, 64, 0.18);
+  font-family: var(--font-wordmark);
+  font-size: 0.86rem;
+  color: var(--color-plum);
+}
+.map-directions:hover { background: var(--color-pink-soft); }

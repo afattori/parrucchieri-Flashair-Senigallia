@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   updateBusinessStatus();
+  initInstagramEmbed();
   window.setInterval(updateBusinessStatus, 60 * 1000);
 });
 
@@ -104,4 +105,31 @@ function updateBusinessStatus() {
     if (isToday) row.setAttribute('aria-current', 'date');
     else row.removeAttribute('aria-current');
   });
+}
+
+
+function initInstagramEmbed() {
+  const container = document.getElementById('instagramEmbed');
+  const postUrl = container?.dataset.instagramPostUrl?.trim();
+  if (!container || !postUrl) return;
+
+  const embed = document.createElement('blockquote');
+  embed.className = 'instagram-media';
+  embed.dataset.instgrmPermalink = postUrl;
+  embed.dataset.instgrmVersion = '14';
+  container.replaceChildren(embed);
+
+  const existingScript = document.querySelector('script[src="https://www.instagram.com/embed.js"]');
+  if (existingScript && window.instgrm?.Embeds) {
+    window.instgrm.Embeds.process();
+    return;
+  }
+
+  if (!existingScript) {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.instagram.com/embed.js';
+    script.addEventListener('load', () => window.instgrm?.Embeds.process());
+    document.body.append(script);
+  }
 }

@@ -636,3 +636,68 @@ a:focus-visible, button:focus-visible {
   color: var(--color-plum);
   font-weight: 600;
 }
+
+
+/* Instagram */
+.section-instagram {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.instagram-intro {
+  max-width: 560px;
+  margin: 0 auto 1.8rem;
+  text-align: center;
+}
+.instagram-intro h2 {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  margin-bottom: 0.6rem;
+}
+.instagram-intro p:last-child { color: var(--color-ink-soft); }
+
+.instagram-embed {
+  max-width: 540px;
+  margin: 0 auto;
+  min-height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instagram-embed .instagram-media {
+  margin: 0 !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+.instagram-placeholder {
+  width: 100%;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  text-align: center;
+  border: 1px solid rgba(169, 120, 79, 0.3);
+  border-radius: var(--radius-md);
+  background: var(--color-cream);
+  box-shadow: var(--shadow-soft);
+  color: var(--color-ink-soft);
+}
+.instagram-placeholder p { margin: 0; }
+.instagram-placeholder-icon {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--color-pink-deep);
+}
+.instagram-placeholder a, .reviews-link {
+  font-family: var(--font-wordmark);
+  color: var(--color-plum);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.reviews-link {
+  display: table;
+  margin: 2rem auto 0;
+  font-size: 0.95rem;
+}
+.instagram-placeholder a:hover, .reviews-link:hover { color: var(--color-pink-deep); }

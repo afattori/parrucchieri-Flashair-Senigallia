@@ -541,6 +541,55 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; margin: 0; colo
 }
 
 /* ==========================================================================
+   Stato Apertura & Orari
+   ========================================================================== */
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-wordmark);
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.6rem;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #5F9E6E; /* Verde aperto */
+  flex-shrink: 0;
+}
+
+.status-dot.closed {
+  background: #C95A5A; /* Rosso chiuso */
+}
+
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  max-width: 320px;
+  border-bottom: 1px dashed rgba(42, 33, 28, 0.12);
+  padding-bottom: 0.2rem;
+}
+
+.hours-list li span:first-child {
+  font-weight: 500;
+  color: var(--color-plum);
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 .site-footer {

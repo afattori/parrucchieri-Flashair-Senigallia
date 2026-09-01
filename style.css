@@ -430,7 +430,11 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; margin: 0; colo
   position: relative;
   box-shadow: var(--shadow-soft);
 }
-.porthole-lg { width: 300px; height: 300px; }
+.porthole-lg {
+  width: min(340px, 100%);
+  height: auto;
+  aspect-ratio: 1;
+}
 .porthole-texture {
   position: absolute; inset: 0;
   background:
@@ -763,10 +767,10 @@ a:focus-visible, button:focus-visible {
 }
 .salone-accent {
   position: absolute;
-  bottom: -18px;
-  right: calc(50% - 190px);
-  width: 90px;
-  height: 90px;
+  bottom: -10px;
+  right: calc(50% - 205px);
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   background: var(--color-plum);
   border: 6px solid var(--color-bg-alt);

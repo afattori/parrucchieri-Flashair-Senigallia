@@ -767,10 +767,10 @@ a:focus-visible, button:focus-visible {
 }
 .salone-accent {
   position: absolute;
-  bottom: -10px;
-  right: calc(50% - 205px);
-  width: 58px;
-  height: 58px;
+  bottom: -4px;
+  right: calc(50% - 188px);
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: var(--color-plum);
   border: 6px solid var(--color-bg-alt);
